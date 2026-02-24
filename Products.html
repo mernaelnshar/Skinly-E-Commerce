@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skinly - Products</title>
+    <link rel="icon" type="image/png" href="/assets/logo/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/Products.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/logo/logo.png" alt="Skinly" height="35">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold active text-primary-skinly"
+                            href="Products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Routine Builder</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-dark position-relative">
+                        <i class="fa-regular fa-heart fs-5"></i>
+                    </a>
+                    <a href="#" class="text-dark position-relative">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span class="badge-cart">2</span>
+                    </a>
+                    <a href="login.html" class="text-dark"><i class="fa-regular fa-user fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb small">
+                <li class="breadcrumb-item"><a href="home.html" class="text-decoration-none text-muted">Home</a></li>
+                <li class="breadcrumb-item active fw-bold text-dark">Products</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <aside class="col-lg-3 pe-lg-5 d-none d-lg-block">
+                <div class="filter-section mb-4">
+                    <h6 class="fw-bold mb-3 text-uppercase small letter-spacing">Categories</h6>
+                    <ul class="list-unstyled sidebar-list">
+                        <li><a href="#"><i class="fa-solid fa-droplet me-2"></i> Cleansers</a></li>
+                        <li><a href="#"><i class="fa-solid fa-sparkles me-2"></i> Toners</a></li>
+                        <li class=""><a href="#"><i class="fa-solid fa-vial me-2"></i> Serums</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cloud me-2"></i> Moisturizers</a></li>
+                        <li><a href="#"><i class="fa-solid fa-sun me-2"></i> Sunscreens</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-section mb-4">
+                    <h6 class="fw-bold mb-3 text-uppercase small letter-spacing">Skin Type</h6>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="check1" checked>
+                        <label class="form-check-label small" for="check1">Combination</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="check2">
+                        <label class="form-check-label small" for="check2">Oily</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="check3">
+                        <label class="form-check-label small" for="check3">Dry</label>
+                    </div>
+                </div>
+
+            </aside>
+
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h4 class="fw-bold mb-0">All Products</h4>
+                        <p class="text-muted small">Showing 24 products</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <select class="form-select form-select-sm border-0 bg-light px-3" style="width: 150px;">
+                            <option>Best Selling</option>
+                            <option>Price: Low to High</option>
+                            <option>All Products</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="product-card p-2">
+                            <div class="product-img-container">
+                                <span class="badge-tag">BEST SELLER</span>
+                                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80"
+                                    class="img-fluid" alt="product">
+                            </div>
+
+                            <div class="product-info">
+                                <div class="d-flex align-items-center mb-1">
+                                    <div class="text-warning small me-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-muted small">(215)</span>
+                                </div>
+
+                                <h5 class="product-title">Vitamin C Glow Serum</h5>
+                                <p class="product-description">Brightens dull skin and fades hyperpigmentation with
+                                    stable 15%...</p>
+
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="product-price">$56.00</span>
+                                    <button class="btn btn-add-cart">
+                                        <i class="fas fa-shopping-cart me-1"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link border-0 mx-1 rounded-circle" href="#"><i class="fa fa-chevron-left"></i></a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link border-0 mx-1 rounded-circle" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link border-0 mx-1 rounded-circle text-dark" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link border-0 mx-1 rounded-circle text-dark" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link border-0 mx-1 rounded-circle text-dark" href="#"><i
+                                    class="fa fa-chevron-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
