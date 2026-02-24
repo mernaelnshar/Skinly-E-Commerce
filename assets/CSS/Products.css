@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #67134c;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+}
+
+.text-primary-skinly {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary-skinly {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-primary-skinly:hover {
+    background-color: #3d0a2d;
+    color: white;
+}
+
+/* Navbar Cart Badge */
+.badge-cart {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* Sidebar Styling */
+.sidebar-list li {
+    margin-bottom: 12px;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.sidebar-list li a {
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.sidebar-list li.active {
+    background-color: var(--primary-color);
+}
+
+.sidebar-list li.active a {
+    color: white;
+    font-weight: 600;
+}
+
+.sidebar-list li:hover:not(.active) {
+    background-color: #f1f1f1;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.25 margin rgba(82, 14, 60, 0.25)!important; 
+}
+
+.form-check-label {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.form-check-label:hover {
+    color: var(--primary-color);
+}
+
+/* Product Grid Adjustments */
+.product-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #f1f1f1;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.product-img-container {
+    background: #fdfbff;
+    padding: 25px;
+    position: relative;
+    text-align: center;
+}
+
+.badge-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #67134c;
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-add-cart {
+    background: #67134c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.btn-add-cart:hover {
+    background: #3d0a2d;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Pagination */
+.page-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #fff !important; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.pagination .page-link:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color) !important;
+}
