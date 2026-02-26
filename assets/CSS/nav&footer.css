@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #67134c;
+    --bg-light: #f8f9fa;
+}
+
+.text-primary-skinly {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary-skinly {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-primary-skinly:hover {
+    background-color: #3d0a2d;
+    color: white;
+}
+
+/* Navbar Cart Badge */
+.badge-cart {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* footer */
+.ultra-simple-footer {
+    padding: 30px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #f8f8f8; /* خط خفيف جداً */
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    font-weight: 400;
+}
+
+.social-minimal a {
+    color: #1a1a1a;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-minimal a:hover {
+    color: #520e3c; /* لون البراند الملون */
+}
+
+/* للموبايل: ترتيب العناصر تحت بعضها */
+@media (max-width: 767px) {
+    .social-minimal a {
+        margin: 0 10px;
+    }
+}

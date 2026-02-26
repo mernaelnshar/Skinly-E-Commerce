@@ -8,33 +8,6 @@ body {
     background-color: #fff;
 }
 
-.text-primary-skinly {
-    color: var(--primary-color) !important;
-}
-
-.btn-primary-skinly {
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 10px;
-    border: none;
-}
-
-.btn-primary-skinly:hover {
-    background-color: #3d0a2d;
-    color: white;
-}
-
-/* Navbar Cart Badge */
-.badge-cart {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 0.65rem;
-    padding: 2px 5px;
-    border-radius: 50%;
-}
 
 /* Sidebar Styling */
 .sidebar-list li {
