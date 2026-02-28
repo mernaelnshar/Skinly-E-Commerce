@@ -23,4 +23,5 @@
 - CSS  
 - JavaScript  
 - **Bootstrap**  
-- GitHub Pages  
+- GitHub Pages
+- Firebase
