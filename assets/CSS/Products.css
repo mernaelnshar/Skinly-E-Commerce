@@ -54,11 +54,13 @@ body {
 
 /* Product Grid Adjustments */
 .product-card {
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 12px;
     background: white;
-    border: 1px solid #f1f1f1;
     transition: 0.3s;
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
@@ -68,9 +70,41 @@ body {
 
 .product-img-container {
     background: #fdfbff;
-    padding: 25px;
     position: relative;
-    text-align: center;
+    padding: 15px; 
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-image {
+    max-height: 200px; 
+    object-fit: contain;
+}
+
+.product-title {
+    font-size: 0.9rem; 
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-description {
+    font-size: 0.75rem; 
+    color: #777;
+    margin-bottom: 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #67134c;
 }
 
 .badge-tag {
@@ -85,20 +119,47 @@ body {
     font-weight: 600;
 }
 
-.btn-add-cart {
-    background: #67134c;
-    color: white;
-    border: none;
-    padding: 8px 15px;
+.rating-stars i {
+    font-size: 0.65rem; 
+}
+
+.btn-add-cart, .btn-add-wishlist {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     transition: 0.3s;
 }
 
+.btn-add-cart {
+    color: #67134c;
+}
+
 .btn-add-cart:hover {
-    background: #3d0a2d;
+    background: #67134c;
     color: white;
-    transform: scale(1.05);
+}
+
+.btn-add-wishlist {
+    color: #a7a7a7;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border: none;
+    background: transparent;
+}
+
+.btn-add-wishlist:hover {
+    background: #e0dfdf;
+    color: red;
+}
+.btn-add-wishlist.active i{
+    color: red !important; 
+}
+
+.btn-add-wishlist.active{
+    background-color: rgb(255, 194, 194);
 }
 
 /* Pagination */

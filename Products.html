@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/Products.css">
     <link rel="stylesheet" href="assets/CSS/nav&footer.css">
+
 </head>
 
 <body>
@@ -20,25 +21,28 @@
             <a class="navbar-brand" href="index.html">
                 <img src="assets/logo/logo.png" alt="Skinly" height="35">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold active text-primary-skinly"
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold active text-primary-skinly"
                             href="Products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">Routine Builder</a></li>
+                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold" href="#">Routine Builder</a></li>
                 </ul>
-                <div class="d-flex align-items-center gap-3">
-                    <a href="wishList.html" class="text-dark position-relative">
+
+                <div
+                    class="d-flex align-items-center justify-content-center gap-4 mt-3 mt-lg-0 border-top pt-3 pt-lg-0 border-lg-0">
+                    <a href="wishList.html" class="text-dark position-relative icon-hover">
                         <i class="fa-regular fa-heart fs-5"></i>
                     </a>
-                    <a href="cart.html" class="text-dark position-relative">
+                    <a href="cart.html" class="text-dark position-relative icon-hover">
                         <i class="fa-solid fa-cart-shopping fs-5"></i>
                         <span class="badge-cart">2</span>
                     </a>
-                    <a href="login.html" class="text-dark"><i class="fa-regular fa-user fs-5"></i></a>
+                    <a href="login.html" class="text-dark icon-hover"><i class="fa-regular fa-user fs-5"></i></a>
                 </div>
             </div>
         </div>
@@ -47,7 +51,7 @@
     <main class="container my-5">
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb small">
-                <li class="breadcrumb-item"><a href="home.html" class="text-decoration-none text-muted">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
                 <li class="breadcrumb-item active fw-bold text-dark">Products</li>
             </ol>
         </nav>
@@ -99,16 +103,16 @@
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="product-card p-2">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-card">
                             <div class="product-img-container">
                                 <span class="badge-tag">BEST SELLER</span>
                                 <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80"
-                                    class="img-fluid" alt="product">
+                                    class="img-fluid product-image" alt="product">
                             </div>
 
-                            <div class="product-info">
-                                <div class="d-flex align-items-center mb-1">
+                            <div class="product-info p-3">
+                                <div class="d-flex align-items-center mb-1 rating-stars">
                                     <div class="text-warning small me-2">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -116,18 +120,22 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                     </div>
-                                    <span class="text-muted small">(215)</span>
+                                    <span class="text-muted" style="font-size: 0.7rem;">(215)</span>
                                 </div>
 
-                                <h5 class="product-title">Vitamin C Glow Serum</h5>
-                                <p class="product-description">Brightens dull skin and fades hyperpigmentation with
-                                    stable 15%...</p>
+                                <h6 class="product-title mb-1">Vitamin C Glow Serum</h6>
+                                <p class="product-description">Brightens dull skin and fades hyperpigmentation...</p>
 
                                 <div class="d-flex justify-content-between align-items-center mt-3">
                                     <span class="product-price">$56.00</span>
-                                    <button class="btn btn-add-cart">
-                                        <i class="fas fa-shopping-cart me-1"></i> Add
-                                    </button>
+                                    <div class="d-flex gap-1">
+                                        <button class="btn btn-add-wishlist p-2">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                        <button class="btn btn-add-cart  p-2">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +145,8 @@
                 <nav class="mt-5">
                     <ul class="pagination justify-content-center">
                         <li class="page-item disabled">
-                            <a class="page-link border-0 mx-1 rounded-circle" href="#"><i class="fa fa-chevron-left"></i></a>
+                            <a class="page-link border-0 mx-1 rounded-circle" href="#"><i
+                                    class="fa fa-chevron-left"></i></a>
                         </li>
                         <li class="page-item active">
                             <a class="page-link border-0 mx-1 rounded-circle" href="#">1</a>
@@ -159,27 +168,30 @@
     </main>
 
     <footer class="ultra-simple-footer">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                <img src="assets/logo/logo.png" alt="Skinly" height="25">
-            </div>
-            
-            <div class="col-md-4 text-center mb-3 mb-md-0">
-                <p class="copyright mb-0">&copy; © 2026 Skinly, Inc. Crafted with care for your skin.</p>
-            </div>
-            
-            <div class="col-md-4 text-center text-md-end">
-                <div class="social-minimal">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <img src="assets/logo/logo.png" alt="Skinly" height="25">
+                </div>
+
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <p class="copyright mb-0">&copy; © 2026 Skinly, Inc. Crafted with care for your skin.</p>
+                </div>
+
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="social-minimal">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
+    <script src="assets/JS/Products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
