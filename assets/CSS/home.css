@@ -40,24 +40,51 @@ body {
     line-height: 1.6;
 }
 
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fff;
+        margin-top: 15px;
+        padding: 25px;
+        border-radius: 20px; /* الحواف الدائرية */
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* الظل */
+        text-align: center;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+        border-bottom: 1px solid #f8f8f8;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-actions {
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+        margin-top: 10px;
+    }
+}
+
 h1, h2, .brand-font {
     font-family: "Playfair Display", serif;
     font-weight: 700;
 }
 
 .btn-primary-skinly {
-    background-color: var(--primary-color);
-    color: var(--text-white);
-    border-radius: var(--radius-sm);
-    padding: 12px 25px;
+    background-color: var(--primary-color) ; /* استبدليها بـ var(--primary-color) لو معرفة */
+    color: white;
+    border-radius: 8px;
+    padding: 10px 25px;
     border: none;
-    transition: var(--transition);
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .btn-primary-skinly:hover {
-    background-color: var(--primary-hover);
-    color: var(--text-white);
+    background-color: #520e3c;
     transform: translateY(-2px);
+    color: white;
 }
 
 .btn-outline-skinly {
@@ -87,7 +114,7 @@ h1, h2, .brand-font {
 }
 
 .navbar-logo {
-    height: 45px;
+    height: 40px;
     width: auto;
     object-fit: contain;      
 }
