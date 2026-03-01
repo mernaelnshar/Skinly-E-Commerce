@@ -73,7 +73,7 @@
 .ultra-simple-footer {
     padding: 30px 0;
     background-color: #ffffff;
-    border-top: 1px solid #f8f8f8; /* خط خفيف جداً */
+    border-top: 1px solid #f8f8f8; 
 }
 
 .copyright {
@@ -90,10 +90,10 @@
 }
 
 .social-minimal a:hover {
-    color: #520e3c; /* لون البراند الملون */
+    color: #520e3c; 
+
 }
 
-/* للموبايل: ترتيب العناصر تحت بعضها */
 @media (max-width: 767px) {
     .social-minimal a {
         margin: 0 10px;
