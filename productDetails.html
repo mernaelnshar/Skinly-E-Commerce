@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skinly - Wishlist</title>
+    <link rel="icon" type="image/png" href="assets/logo/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/productDetails.css">
+    <link rel="stylesheet" href="assets/CSS/nav&footer.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo/logo.png" alt="Skinly" height="35">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold  "
+                            href="Products.html">Products</a></li>
+                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold" href="#">Routine Builder</a></li>
+                </ul>
+
+                <div
+                    class="d-flex align-items-center justify-content-center gap-4 mt-3 mt-lg-0 border-top pt-3 pt-lg-0 border-lg-0">
+                    <a href="wishList.html" class="text-dark position-relative  icon-hover">
+                        <i class="fa-regular fa-heart fs-5"></i>
+                    </a>
+                    <a href="cart.html" class="text-dark position-relative icon-hover">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span class="badge-cart">2</span>
+                    </a>
+                    <a href="login.html" class="text-dark icon-hover"><i class="fa-regular fa-user fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb small">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                <li class="breadcrumb-item"><a href="Products.html" class="text-decoration-none text-muted">Shop</a>
+                </li>
+                <li class="breadcrumb-item active fw-bold text-dark">Serums</li>
+            </ol>
+        </nav>
+    </div>
+
+
+
+    <section class="product-details py-5">
+        <div class="container mt-5">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="product-image-wrapper p-4 bg-light rounded-4 text-center">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600"
+                            id="mainProductImg" class="img-fluid rounded-3 shadow-sm" alt="Skinly Product">
+                    </div>
+                    <div class="d-flex gap-3 mt-3 justify-content-center">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600"
+                            class="thumb-img active" onclick="changeImg(this.src, this)">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600" class="thumb-img"
+                            onclick="changeImg(this.src, this)">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h1 class="fw-bold mb-2">Vitamin C Glow Serum</h1>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="text-warning me-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-muted small">(124 Reviews)</span>
+                    </div>
+
+                    <h3 class="text-primary-skinly fw-bold mb-4">$56.00</h3>
+
+                    <p class="text-muted mb-4">
+                        Our Vitamin C Glow Serum is formulated with 15% pure L-ascorbic acid to brighten your skin,
+                        reduce dark spots, and provide antioxidant protection.
+                    </p>
+
+                    <div class="mb-4">
+                        <label class="fw-bold small mb-2 d-block">SIZE</label>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-dark btn-sm rounded-pill px-3 active">30ml</button>
+                            <button class="btn btn-outline-dark btn-sm rounded-pill px-3">50ml</button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3 mb-5">
+                        <div class="quantity-control d-flex align-items-center border rounded-pill px-3 py-2">
+                            <button class="btn btn-sm border-0 p-0" onclick="updateQty(-1)"><i
+                                    class="fas fa-minus small"></i></button>
+                            <span class="mx-4 fw-bold" id="productQty">1</span>
+                            <button class="btn btn-sm border-0 p-0" onclick="updateQty(1)"><i
+                                    class="fas fa-plus small"></i></button>
+                        </div>
+                        <button class="btn btn-primary-skinly btn-add-cart flex-grow-1 py-3 rounded-pill fw-bold">Add to
+                            Cart</button>
+                        <button class="btn btn-add-wishlist p-3">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="accordion accordion-flush" id="productAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#desc">
+                                    Ingredients
+                                </button>
+                            </h2>
+                            <div id="desc" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                                <div class="accordion-body text-muted small">
+                                    Aqua, L-Ascorbic Acid, Ferulic Acid, Vitamin E, Hyaluronic Acid, Glycerin...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#howTo">
+                                    How to use
+                                </button>
+                            </h2>
+                            <div id="howTo" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                                <div class="accordion-body text-muted small">
+                                    Apply 3-5 drops to clean, dry skin in the morning. Follow with moisturizer and SPF.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-reviews py-5 border-top">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4">Customer Reviews</h4>
+                    <div class="rating-summary p-4 rounded-4 bg-light text-center">
+                        <h1 class="fw-bold display-4 mb-0">4.8</h1>
+                        <div class="text-warning my-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-muted small">Based on 124 reviews</p>
+
+                        <div class="mt-4 text-start">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="small me-2 text-nowrap">5 Star</span>
+                                <div class="progress w-100" style="height: 6px;">
+                                    <div class="progress-bar bg-primary-skinly" style="width: 85%;"></div>
+                                </div>
+                                <span class="small ms-2 text-muted">85%</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="small me-2 text-nowrap">4 Star</span>
+                                <div class="progress w-100" style="height: 6px;">
+                                    <div class="progress-bar bg-primary-skinly" style="width: 10%;"></div>
+                                </div>
+                                <span class="small ms-2 text-muted">10%</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline-dark w-100 mt-4 rounded-pill fw-bold py-2" data-bs-toggle="modal"
+                            data-bs-target="#reviewModal">
+                            Write a Review
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="reviews-list">
+                        <div class="review-item pb-4 mb-4 border-bottom">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-circle me-3">SA</div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Sarah Ahmed</h6>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-muted small">2 days ago</span>
+                            </div>
+                            <p class="mt-3 text-muted">
+                                Amazing serum! My skin looks much brighter after just one week of use. Highly recommend
+                                for dull skin.
+                            </p>
+                        </div>
+
+                        <div class="review-item pb-4 mb-4">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-circle me-3">MO</div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Mona Omar</h6>
+                                        <div class="text-warning small">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-muted small">1 week ago</span>
+                            </div>
+                            <p class="mt-3 text-muted">
+                                Good product, but the texture is a bit sticky for my oily skin. Still, the results are
+                                great.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn btn-light w-100 rounded-pill py-2">Load More Reviews</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="reviewModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header border-0">
+                    <h5 class="fw-bold">Write a Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="mb-3 text-center">
+                        <p class="small text-muted mb-2">Rate the product</p>
+                        <div class="text-muted fs-3">
+                            <i class="far fa-star pointer"></i><i class="far fa-star pointer"></i><i
+                                class="far fa-star pointer"></i><i class="far fa-star pointer"></i><i
+                                class="far fa-star pointer"></i>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Your Comment</label>
+                        <textarea class="form-control rounded-3" rows="4"
+                            placeholder="How was your experience?"></textarea>
+                    </div>
+                    <button id="submitReview" class="btn btn-primary-skinly w-100 py-3 rounded-pill fw-bold">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="ultra-simple-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <img src="assets/logo/logo.png" alt="Skinly" height="25">
+                </div>
+
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <p class="copyright mb-0">&copy; © 2026 Skinly, Inc. Crafted with care for your skin.</p>
+                </div>
+
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="social-minimal">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/JS/productDetails.js"></script>
+    <script src="assets/JS/Products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

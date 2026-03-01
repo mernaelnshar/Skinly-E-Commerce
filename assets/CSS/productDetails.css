@@ -1,0 +1,129 @@
+.product-image-wrapper {
+    width: 100%;
+    
+    height: 500px; 
+    overflow: hidden;
+    background-color: #fdfbff; /* لون خلفية ناعم يملأ الفراغات */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: zoom-in;
+}
+
+.product-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:cover; /* بيحافظ على أبعاد الصورة الأصلية بدون مط */
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.product-image-wrapper:hover img {
+    transform: scale(1.1); /* تأثير الزووم اللي عاجبك */
+}
+
+.thumb-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* الصور الصغيرة تبقى مربعة ومنظمة */
+    border-radius: 12px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.thumb-img.active, .thumb-img:hover {
+    border-color: #67134c;
+    opacity: 0.8;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    box-shadow: none;
+    color: #67134c !important;
+}
+
+.btn-add-wishlist {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    color: #a7a7a7;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border: none;
+    background: transparent;
+}
+
+.btn-add-wishlist:hover {
+    background: #e0dfdf;
+    color: red;
+}
+.btn-add-wishlist.active i{
+    color: red !important; 
+}
+
+.btn-add-wishlist.active{
+    background-color: rgb(255, 194, 194);
+}
+
+.bg-primary-skinly {
+    background-color: #67134c !important;
+}
+
+.rating-summary {
+    border: 1px solid #f1f1f1;
+}
+
+/* دائرة الرمز الشخصي للعميل */
+.avatar-circle {
+    width: 45px;
+    height: 45px;
+    background: #fdfbff;
+    border: 1px solid #67134c22;
+    color: #67134c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.review-item p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* شكل الـ Progress bar ناعم */
+.progress {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.btn-outline-dark:hover {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#reviewModal .fa-star {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#reviewModal .fa-star:hover {
+    transform: scale(1.2); 
+}
+
+.review-item {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
