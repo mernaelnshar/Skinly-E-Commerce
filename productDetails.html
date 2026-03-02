@@ -27,8 +27,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
                     <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
-                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold  "
-                            href="Products.html">Products</a></li>
+                    <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold  " href="Products.html">Shop</a>
+                    </li>
                     <li class="nav-item py-2 py-lg-0"><a class="nav-link fw-semibold" href="#">Routine Builder</a></li>
                 </ul>
 
@@ -149,11 +149,42 @@
         </div>
     </section>
 
+    <section class="related-products py-5 border-top bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold mb-0 text-primary-skinly">You May Also Like</h3>
+                <a href="Products.html" class="text-primary-skinly text-decoration-none fw-semibold small">View All</a>
+            </div>
+
+            <div class="row g-4">
+                
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571"
+                                class="img-fluid product-image " alt="product">
+                            <button class="btn btn-add-wishlist-quick btn-add-wishlist"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="product-info p-3 bg-white">
+                            <h6 class="product-title mb-1">Brightening Cleanser</h6>
+                            <span class="product-price">$32.00</span>
+                            <div class="mt-2">
+                                <button class="btn btn-outline-dark btn-sm w-100 rounded-pill">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section class="product-reviews py-5 border-top">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <h4 class="fw-bold mb-4">Customer Reviews</h4>
+                    <h4 class="fw-bold mb-4 text-primary-skinly">Customer Reviews</h4>
                     <div class="rating-summary p-4 rounded-4 bg-light text-center">
                         <h1 class="fw-bold display-4 mb-0">4.8</h1>
                         <div class="text-warning my-2">
@@ -230,11 +261,13 @@
                             </p>
                         </div>
                     </div>
-                    <button class="btn btn-light w-100 rounded-pill py-2">Load More Reviews</button>
+                    <button class="btn btn-primary-skinly w-100 rounded-pill py-2">Load More Reviews</button>
                 </div>
             </div>
         </div>
     </section>
+
+    
 
 
     <div class="modal fade" id="reviewModal" tabindex="-1">
@@ -258,7 +291,8 @@
                         <textarea class="form-control rounded-3" rows="4"
                             placeholder="How was your experience?"></textarea>
                     </div>
-                    <button id="submitReview" class="btn btn-primary-skinly w-100 py-3 rounded-pill fw-bold">Submit Review</button>
+                    <button id="submitReview" class="btn btn-primary-skinly w-100 py-3 rounded-pill fw-bold">Submit
+                        Review</button>
                 </div>
             </div>
         </div>

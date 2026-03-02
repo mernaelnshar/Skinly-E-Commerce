@@ -1,4 +1,3 @@
-
 function changeImg(src, element) {
     const mainImg = document.getElementById('mainProductImg');
 
@@ -23,38 +22,31 @@ function updateQty(val) {
 
 document.querySelectorAll('#reviewModal .fa-star').forEach((star, index, stars) => {
     star.addEventListener('click', () => {
-        // نمر على كل النجوم
         stars.forEach((s, i) => {
             if (i <= index) {
-                // تلوين النجوم المختارة
                 s.classList.remove('far', 'text-muted');
                 s.classList.add('fas', 'text-warning');
             } else {
-                // مسح التلوين من النجوم الأبعد
                 s.classList.remove('fas', 'text-warning');
                 s.classList.add('far', 'text-muted');
             }
         });
 
-        // ممكن تخزني قيمة التقييم هنا في متغير لو حابة (مثلاً index + 1)
         console.log("Rating selected:", index + 1);
     });
 });
 
 
 document.getElementById('submitReview').addEventListener('click', function () {
-    // 1. نجيب البيانات من الـ Modal
     const commentText = document.querySelector('#reviewModal textarea').value;
-    const stars = document.querySelectorAll('#reviewModal .fa-star.fas').length; // بنعد النجوم الملونه
+    const stars = document.querySelectorAll('#reviewModal .fa-star.fas').length; 
     const reviewList = document.querySelector('.reviews-list');
 
-    // تأكدي إن المستخدم كتب تعليق
     if (commentText.trim() === "") {
         alert("Please write a comment first!");
         return;
     }
 
-    // 2. نجهز شكل النجوم اللي هتظهر في التعليق الجديد
     let starsHtml = '';
     for (let i = 0; i < 5; i++) {
         if (i < stars) {
@@ -64,7 +56,6 @@ document.getElementById('submitReview').addEventListener('click', function () {
         }
     }
 
-    // 3. ننشئ عنصر التعليق الجديد
     const newReview = document.createElement('div');
     newReview.className = 'review-item pb-4 mb-4 border-bottom';
     newReview.style.display = 'none'; 
@@ -87,11 +78,8 @@ document.getElementById('submitReview').addEventListener('click', function () {
         </p>
     `;
 
-    // 4. نضيفه في أول القائمة
     reviewList.prepend(newReview);
 
-    // 5. أنيميشن بسيط عشان التعليق يظهر بشكل شيك
-    // ✅ البديل الصحيح
     newReview.style.display = 'block';
     newReview.style.opacity = '0';
     setTimeout(() => {
@@ -99,12 +87,10 @@ document.getElementById('submitReview').addEventListener('click', function () {
         newReview.style.opacity = "1";
     }, 10);
 
-    // 6. نقفل الموديل وننظف البيانات
     const modalElement = document.getElementById('reviewModal');
     const modal = bootstrap.Modal.getInstance(modalElement);
     modal.hide();
 
-    // رسالة نجاح بسيطة
     Swal.fire({
         icon: 'success',
         title: 'Review Submitted',
@@ -113,10 +99,18 @@ document.getElementById('submitReview').addEventListener('click', function () {
         showConfirmButton: false
     });
 
-    // تنظيف الفورم
     document.querySelector('#reviewModal textarea').value = "";
     document.querySelectorAll('#reviewModal .fa-star').forEach(s => {
         s.classList.remove('fas', 'text-warning');
         s.classList.add('far');
+    });
+});
+
+document.querySelectorAll('.related-products .btn-outline-dark').forEach(btn => {
+    btn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
