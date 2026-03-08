@@ -76,12 +76,6 @@ body {
     padding-top: 20px !important;
 }
 
-.wallet-card {
-    background: linear-gradient(135deg, var(--primary-color), #8a2165);
-    color: white;
-    border-radius: 18px;
-    padding: 25px;
-}
 
 .badge-status {
     padding: 6px 14px;
