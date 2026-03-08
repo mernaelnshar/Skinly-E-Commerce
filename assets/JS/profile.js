@@ -367,6 +367,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         icon: 'success',
                         confirmButtonColor: '#520e3c',
                         customClass: { popup: 'rounded-4' }
+                    }).then(() => {
+                        window.location.href = 'login.html';
                     });
                 }
             });
