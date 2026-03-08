@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #520e3c; /* اللون البرقوقي من صورك */
+    --primary-color: #520e3c; 
     --bg-soft: #fdfbff;
 }
 
@@ -8,7 +8,7 @@
     min-height: 60vh;
 }
 
-/* تعديل الكارت ليتناسب مع صفحة المفضلة */
+
 .product-card {
     border: 1px solid #f1f1f1;
     border-radius: 15px;

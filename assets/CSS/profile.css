@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #520e3c;
+    --bg-soft: #fdfbff;
+    --secondary-bg: #f8f9fa;
+}
+
+body {
+    background-color: var(--bg-soft);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(82, 14, 60, 0.05);
+}
+
+.product-stack .stack-item img, 
+.product-stack .counter div {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-stack:hover .stack-item {
+    transform: translateX(-5px) scale(1.05) !important;
+}
+
+.product-stack .stack-item {
+    transition: 0.3s ease;
+}
+
+.transition-3 {
+    transition: all 0.3s ease;
+}
+
+.transition-3:hover {
+    background-color: #fff1f1;
+    transform: translateY(-2px);
+}
+
+.profile-nav .nav-link {
+    color: #666;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 12px 20px;
+}
+
+.profile-nav .nav-link i {
+    width: 25px; 
+    text-align: center; 
+    margin-right: 12px !important; 
+}
+
+.profile-nav .nav-link.active {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+.profile-nav .nav-link:hover:not(.active) {
+    background: #520e3c11;
+    color: var(--primary-color);
+}
+
+.logout-link {
+    color: #dc3545 !important;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+    padding-top: 20px !important;
+}
+
+.wallet-card {
+    background: linear-gradient(135deg, var(--primary-color), #8a2165);
+    color: white;
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.badge-status {
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #fff8e6;
+    color: #b08905;
+}
+
+.status-shipped {
+    background: #e7f3ff;
+    color: #0056b3;
+}
+
+.status-delivered {
+    background: #e6f9ed;
+    color: #1e7e34;
+}
+
+.form-control {
+    background: var(--secondary-bg);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+}
+
+.btn-skinly {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    padding: 12px 30px;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-skinly:hover {
+    background: #3d0a2d;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.modal-content {
+    background-color: #fff;
+}
+
+
+#reviewModal .fa-star {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#reviewModal .fa-star:hover {
+    transform: scale(1.2); 
+}
+
+.review-item {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.address-card .btn-link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    transition: all 0.25s ease-in-out;
+    position: relative;
+}
+
+.address-card .btn-link.text-dark:hover {
+    background-color: rgba(0, 0, 0, 0.05); 
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+.address-card .btn-link.text-danger:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545 !important;
+    transform: scale(1.1);
+}
+
+.address-card .btn-link i {
+    transition: transform 0.2s ease;
+    margin: 0 !important; 
+}
+
+.set-default-btn {
+    transition: all 0.3s ease;
+    font-size: 0.75rem;
+}
+
+.set-default-btn:hover {
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 1px var(--primary-color);
+    opacity: 0.8;
+}
